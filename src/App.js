@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{ useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = ()=> {
+  const [listItemArea, setListItemArea] = useState("")
+  const [items, setItems] = useState([])
+  const listItems = items.map((item, i)=> <li key={i}>{item}</li>)
+	//typing into text filed
+
+const storeListItems = (event)=> {
+	setListItemArea(event.currentTarget.value)
+}
+
+//pass in event when button is clicked
+const handleButtonClick = (event)=> {
+	setItems([...items, listItemArea])
+}
+
+
+return (
+		<div className="App">
+		<textarea onChange={storeListItems}></textarea>
+		<button onClick={handleButtonClick}>Save</button>
+		<ul>{listItems}</ul>
+		</div>
+ );
 }
 
 export default App;
+

@@ -24,6 +24,12 @@
   color: white;
 }
 
+	
+
+.textarea {
+	 align-items:center, relative;
+	 }
+
 .App-link {
   color: #61dafb;
 }
