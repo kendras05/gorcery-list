@@ -21,7 +21,7 @@ return (
 		<div className="list">
 		<textarea onChange={storeListItems}></textarea>
 		<button onClick={handleButtonClick}>Save</button>
-		<ul><input type="checkbox">{listItems}</input></ul>
+		<ul>{listItems}</ul>
 		</div>
  );
 }
