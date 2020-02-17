@@ -1,4 +1,5 @@
 import React,{ useState } from 'react';
+import './App.css';
 
 const App = ()=> {
   const [listItemArea, setListItemArea] = useState("")
@@ -17,7 +18,7 @@ const handleButtonClick = (event)=> {
 
 
 return (
-		<div className="App">
+		<div className="list">
 		<textarea onChange={storeListItems}></textarea>
 		<button onClick={handleButtonClick}>Save</button>
 		<ul>{listItems}</ul>
